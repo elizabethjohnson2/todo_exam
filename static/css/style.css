@@ -89,25 +89,33 @@ br.clear {
     src: local("Gordita Bold"), url("../Gordita Bold.woff") format("woff");
 }
 header{
-    display: flex;
+    /* display: flex;
     align-items: center;
     margin-bottom: 15px;
+    justify-content: space-between; */
+height: 150px;
+}
+header .wrapper{
+    display: flex;
     justify-content: space-between;
+    padding:40px 20px;
 
 
 }
-header.wrapper{
+header .wrapper div.left{
+    /* width: 150px; */
 
 }
-header.wrapper div.left{
-    width: 150px;
-
+header .wrapper div.left h1{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Gordita Bold";
 }
-header.wrapper div.right{
+header .wrapper div.right{
     display: block;
-
+    
 }
-header.wrapper div.right a{
+header .wrapper div.right a{
     background-color: #5aab7b;
     padding: 10px;
     font-size: 20px;
@@ -115,9 +123,27 @@ header.wrapper div.right a{
     color: #fff;
     text-align: center;
     border-radius: 8px;
-    display: inline-block;
+    /* display: inline-block; */
 
 }
+#spotlight{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#spotlight div.container{
+    width: 1300px;
+
+
+}
+#spotlight div.container img{
+    display: block;
+    width:100%;
+
+
+
+}
+
  
    
 
