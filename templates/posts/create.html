@@ -6,18 +6,22 @@
     <section id="wrapper">
         <h1>TODO TASK LIST</h1>
         <div class="content">
-           
+            {% for instance in instances %}
+           <div class = "container">
        
             <h1 class="left">
-                <p>Read one book a week for a whole year</p>
+               
+                <p>{{instance.title}}</p>
             </h1>
                 <h2 class="right">
                     
                     <a href="">Finished Task</a>
-                <div class="container">
-                    <img src="{% static 'images/delete.svg' %}"/>
-                </div>
+                    <a href="">Edit Task</a>
+                    <a href="">Delete Task</a>
               </h2>
+            </div>
+              {% endfor %}
+            
         </div>
        
     </section>

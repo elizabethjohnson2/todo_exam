@@ -154,18 +154,25 @@ font-size: 35px;
 font-weight: 900;
 }
 #wrapper div.content {
-display: flex;
+/* display: flex;
 justify-content: center;
+flex-wrap: wrap; */
 align-items: center;
+margin: 0 auto;
 margin-top: 30px;
+
 /* width: 70%; */
 }
- 
+#wrapper .content .container {
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+}
 
 
 #wrapper  h1.left{
-
-
+width: 35%;
+text-align: left;
 
 }
 #wrapper  h1.left p{
@@ -179,18 +186,7 @@ justify-content: space-between;
 margin-left: 40px;
     
 }
-#wrapper div.container{
-    width:25%;
-    margin-left: 20px;
-    
-}
-#wrapper h2.right img{
-display: block;
-width: 100%;
-align-items: center;
 
-    
-}
 #wrapper  h2.right a{
 padding:12px 20px;
 border:2px solid #fff;
