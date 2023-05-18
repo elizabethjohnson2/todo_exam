@@ -35,9 +35,11 @@ section.container {
     align-items: top;
     justify-content: center;
     padding-top: 80px;
+    
 }
 section.container section.form_container {
     width: 400px;
+   
 }
 
 section.container section.form_container div.top {
