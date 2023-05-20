@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 
 
-
 from posts.models import Task
 
 
@@ -20,6 +19,7 @@ def create_post(request):
     }
     return render(request,"posts/create.html", context=context)
 
+
 @login_required(login_url="users/login/")
 def delete_post(request,id):
     instance = get_object_or_404(Task,id=id)
@@ -34,7 +34,6 @@ def delete_post(request,id):
     }
 
     return HttpResponse(json.dumps(response_data),content_type="application/json")
-
 
 
 @login_required(login_url="users/login/")
@@ -57,7 +56,6 @@ def edit_task(request,id):
     return render(request,"posts/edit_task.html", context=context)
 
 
-
 @login_required(login_url="users/login/")
 def completed_task(request,id):
     instance = get_object_or_404(Task,id=id)
@@ -78,18 +76,4 @@ def revised_task(request,id):
     return redirect("posts:create_post")
 
  
-# def edit_task(request, id):
 
-#     task = get_object_or_404( Task, id=id)
-
-#     if request.method == 'POST':
-#         form = TaskForm(request.POST, instance=task)
-
-#         if form.is_valid():
-#             form.save()
-
-#             return redirect('posts/create.html')
-#     else:
-#         form = TaskForm(instance=task)
-    
-#     return render(request, 'posts/create.html', {'form': form})   

@@ -90,11 +90,7 @@ br.clear {
     src: local("Gordita Bold"), url("../Gordita Bold.woff") format("woff");
 }
 header{
-    /* display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    justify-content: space-between; */
-height: 150px;
+    height: 150px;
 }
 header .wrapper{
     display: flex;
@@ -104,8 +100,7 @@ header .wrapper{
 
 }
 header .wrapper div.left{
-    /* width: 150px; */
-
+    
 }
 header .wrapper div.left h1{
     font-size: 30px;
@@ -124,88 +119,65 @@ header .wrapper div.right a{
     color: #fff;
     text-align: center;
     border-radius: 8px;
-    /* display: inline-block; */
-
 }
 #spotlight{
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #spotlight div.container{
     width: 1300px;
-
-
 }
 #spotlight div.container img{
     display: block;
     width:100%;
-
-
-
 }
 #wrapper{
-
-
 }
 #wrapper  h1{
-text-align: center;
-/* margin-top: 30px; */
-font-size: 30px;
-font-weight: 900;
+    text-align: center;
+    
+    font-size: 30px;
+    font-weight: 900;
 }
 #wrapper  p{
-    /* text-align: center; */
-    /* margin-top: 30px; */
     font-size: 25px;
     font-weight: 700;
     margin-left: 10%;
     }
 #wrapper div.content {
-/* display: flex;
-justify-content: center;
-flex-wrap: wrap; */
-align-items: center;
-margin: 0 auto;
-margin-top: 30px;
 
-/* width: 70%; */
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 #wrapper .content .container {
-    /* width: 80%; */
     display: flex;
     justify-content: center;
 }
-
-
 #wrapper  h1.left{
-width: 40%;
-text-align: left;
+    width: 40%;
+    text-align: left;
 
 }
 #wrapper  h1.left p{
-font-size: 23px;
-font-weight: 900;
-font-family:Gordita Bold ;
+    font-size: 23px;
+    font-weight: 900;
+    font-family:Gordita Bold ;
 }
 #wrapper  h1.left  input {
 
-width: 60%;
-height: 40px;
-border: 1px solid #949494;
-border-radius: 6px;
-/* padding: 12px; */
-/* margin-bottom: 3%; */
-margin-left: 10%;
+    width: 60%;
+    height: 40px;
+    border: 1px solid #949494;
+    border-radius: 6px;
+    margin-left: 10%;
 }
 #wrapper h2.right{
-display: flex;
-justify-content: space-between;
-margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
 }
-    
-
-
 #wrapper  h2.right a{
     padding: 29px 24px;
     border: 1px solid #fff;
@@ -219,21 +191,17 @@ margin-left: 40px;
     
 }
 #wrapper  h2.right a img{
-    /* background-color: green; */
     align-items: center;
-
 }
 #wrapper  div.spotlight p{
     font-size: 35px;
     font-weight: 700;
     margin-left: 10%;
-   background-image: url();
-
+    /* background-image: url(); */
 }
 #wrapper .spotlight .container {
     margin-bottom: 20px;
 }
-
 #wrapper div.spotlight div.container h2.right  a{
     padding: 29px 24px;
     border: 1px solid #fff;
@@ -243,8 +211,7 @@ margin-left: 40px;
     background-color: #5aab7b;
     margin-right: 20px;
     display: flex;
-    align-items: center;
-    
+    align-items: center;  
 }
 #edit-post-home {
     padding: 3% 0 5%;
@@ -272,7 +239,6 @@ margin-left: 40px;
     border: 2px solid #949494;
     border-radius: 6px;
     padding: 25px;
-    /* margin-bottom: 3%; */
     margin-left: 10%;
 }
 #edit-post-home form div.form-field_submit {

@@ -9,7 +9,7 @@
                     <form action="" method="POST" >
                         {% csrf_token %}
                         {% for field in form %}
-                        <div class="input_container">
+                        <div class="input_c ontainer">
                             <label for="{{field.id_for_label}}">{{field.label}}</label>
                             {{field}}
                         </div>

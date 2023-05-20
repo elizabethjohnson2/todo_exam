@@ -4,12 +4,14 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include("users.urls", namespace="users")),
     path('', include("web.urls", namespace="web")),
     path('posts/', include("posts.urls", namespace="posts")),
 ]
+
 
 if settings.DEBUG:
     urlpatterns += (
