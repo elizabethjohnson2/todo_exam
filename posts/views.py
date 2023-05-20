@@ -5,7 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 
 
-from posts.models import Task
+from posts.models import Task,Completed
 
 
 @login_required(login_url="users/login/")
@@ -54,15 +54,15 @@ def edit_task(request,id):
     return render(request,"posts/edit_task.html", context=context)
 
 
-# @login_required(login_url="users/login/")
-# def create_post(request):
-#     instances = Completed.objects.filter(is_delete=False)
-#     context = {
-#         "title":"task page",
-#         "instances":instances
+@login_required(login_url="users/login/")
+def complete_task(request):
+    instances = Completed.objects.filter(is_delete=False)
+    context = {
+        "title":"task page",
+        "instances":instances
 
-#     }
-#     return render(request,"posts/create.html", context=context)
+    }
+    return render(request,"posts/create.html", context=context)
  
 # def edit_task(request, id):
 

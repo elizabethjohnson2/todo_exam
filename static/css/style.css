@@ -151,13 +151,13 @@ align-items: center;
 #wrapper  h1{
 text-align: center;
 /* margin-top: 30px; */
-font-size: 35px;
+font-size: 30px;
 font-weight: 900;
 }
 #wrapper  p{
     /* text-align: center; */
     /* margin-top: 30px; */
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 700;
     margin-left: 10%;
     }
@@ -179,35 +179,48 @@ margin-top: 30px;
 
 
 #wrapper  h1.left{
-width: 35%;
+width: 40%;
 text-align: left;
 
 }
 #wrapper  h1.left p{
-font-size: 25px;
+font-size: 20px;
 font-weight: 900;
 font-family:Gordita Bold ;
+}
+#wrapper  h1.left  input {
+
+width: 60%;
+height: 40px;
+border: 1px solid #949494;
+border-radius: 6px;
+/* padding: 12px; */
+/* margin-bottom: 3%; */
+margin-left: 10%;
 }
 #wrapper h2.right{
 display: flex;
 justify-content: space-between;
 margin-left: 40px;
-    
 }
+    
+
 
 #wrapper  h2.right a{
-    padding: 10px 15px;
-    border: 2px solid #fff;
-    border-radius: 50px;
+    padding: 29px 24px;
+    border: 1px solid #fff;
+    border-radius: 11px;
+    height: 40px;
     font-size: 10px;
-    margin-top: 15px;
-    width: 130px;
-    text-align: center;
     background-color: #5aab7b;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
     
 }
 #wrapper  h2.right a img{
     /* background-color: green; */
+    align-items: center;
 
 }
 #wrapper  div.spotlight p{
@@ -216,6 +229,20 @@ margin-left: 40px;
     margin-left: 10%;
    
 
+}
+
+
+#wrapper div.spotlight div.container h2.right  a{
+    padding: 29px 24px;
+    border: 1px solid #fff;
+    border-radius: 11px;
+    height: 40px;
+    font-size: 10px;
+    background-color: #5aab7b;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    
 }
 #edit-post-home {
     padding: 3% 0 5%;

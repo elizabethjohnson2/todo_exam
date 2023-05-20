@@ -13,19 +13,20 @@
             <h1 class="left">
                
                 <p>{{instance.title}}</p>
+                <input type="" name="" />
             </h1>
                 <h2 class="right">
                     
                     <a href="">Finished Task</a>
                     <a href="{% url 'posts:edit_task' id=instance.id  %}" class="edit_tasks" method="POST">
-                        <img src="{% static './images/pencil.svg' %}"/>
+                        <img src="{{instance.edit_image.url}}"/>
                     </a>
                     {% csrf_token %}
                     <a href="{% url 'posts:delete_post' id=instance.id %}" 
                     class="action-button reload"
                     data-text="Are you sure want to remove this post."
                     data-title="Confirm Delete!"
-                    title="Delete"><img src ="{% static './images/delete.svg' %}"/></a>
+                    title="Delete"><img src ="{{instance.delete_image.url}}"/></a>
                   
               </h2>
             </div>
@@ -44,20 +45,22 @@
                     </h1>
                         <h2 class="right">
                             
-                            <a href="">Finished Task</a>
+                            <a href="">Revised Task</a>
                             <a href="{% url 'posts:edit_task' id=instance.id  %}" class="edit_tasks" method="POST">
-                                <img src="{% static './images/pencil.svg' %}"/>
+                                <img src="{{instance.edit_image.url}}"/>
                             </a>
                             {% csrf_token %}
                             <a href="{% url 'posts:delete_post' id=instance.id %}" 
                             class="action-button reload"
                             data-text="Are you sure want to remove this post."
                             data-title="Confirm Delete!"
-                            title="Delete"><img src ="{% static './images/delete.svg' %}"/></a>
+                            title="Delete"><img src ="{{instance.delete_image.url}}"/></a>
                           
                       </h2>
                     </div>
                       {% endfor %}
+                    
+                </div>
         </section>
             
        
