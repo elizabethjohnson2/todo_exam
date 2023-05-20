@@ -1,7 +1,8 @@
 import json
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+
 
 
 from posts.models import Task
@@ -32,19 +33,38 @@ def delete_post(request,id):
 
     return HttpResponse(json.dumps(response_data),content_type="application/json")
 
- 
-def edit_task(request, id):
 
-    task = get_object_or_404( Task, id=id)
-
+@login_required(login_url="users/login/")
+def edit_task(request,id):
+    instance = get_object_or_404(Task,id=id)
     if request.method == 'POST':
-        form = TaskForm(request.POST, instance=task)
+        edited_text = request.POST.get("edited-text")
+        instance = Task.objects.get(id=id)
+        if edited_text :
+            instance.title = edited_text
+            instance.save()
 
-        if form.is_valid():
-            form.save()
+        
+        return redirect("posts:b create_post")
+    context = {
+        "title":"Edit Task Page",
+        'todo_text': instance
+        
+    }
+    return render(request,"posts/edit_task.html", context=context)
+ 
+# def edit_task(request, id):
 
-            return redirect('posts/create.html')
-    else:
-        form = TaskForm(instance=task)
+#     task = get_object_or_404( Task, id=id)
+
+#     if request.method == 'POST':
+#         form = TaskForm(request.POST, instance=task)
+
+#         if form.is_valid():
+#             form.save()
+
+#             return redirect('posts/create.html')
+#     else:
+#         form = TaskForm(instance=task)
     
-    return render(request, 'posts/create.html', {'form': form})   
+#     return render(request, 'posts/create.html', {'form': form})   

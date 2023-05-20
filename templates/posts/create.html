@@ -16,13 +16,15 @@
                 <h2 class="right">
                     
                     <a href="">Finished Task</a>
-                    <a href="" class="edit_tasks" method="POST">Edit Task</a>
+                    <a href="{% url 'posts:edit_task' id=instance.id  %}" class="edit_tasks" method="POST">
+                        <img src="{% static './images/pencil.svg' %}"/>
+                    </a>
                     {% csrf_token %}
                     <a href="{% url 'posts:delete_post' id=instance.id %}" 
                     class="action-button reload"
                     data-text="Are you sure want to remove this post."
                     data-title="Confirm Delete!"
-                    title="Delete">Delete Task</a>
+                    title="Delete"><img src ="{% static './images/delete.svg' %}"/></a>
                   
               </h2>
             </div>

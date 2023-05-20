@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% include "web/includes/header.html" %}
+    <section id="edit-post-home">
+        <section class="wrapper">   
+            <section class="spotlight">
+                <h3>Edit Task</h3>
+                <form action="" method="post"  class="" entype="">
+                    {% csrf_token %}
+                
+                    <div class="form-field">  
+                        <input type="text" name="edited-text" value="{{todo_text}}" />    
+                            
+                    </div>
+                    <div class="form-field_submit">
+                        <Button type="submit" value="Submit" >Submit</Button>
+                    </div>
+                </form>
+        </section>
+    </section>  
+{% endblock %}
