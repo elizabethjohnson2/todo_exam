@@ -154,6 +154,13 @@ text-align: center;
 font-size: 35px;
 font-weight: 900;
 }
+#wrapper  p{
+    /* text-align: center; */
+    /* margin-top: 30px; */
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 10%;
+    }
 #wrapper div.content {
 /* display: flex;
 justify-content: center;
@@ -201,6 +208,13 @@ margin-left: 40px;
 }
 #wrapper  h2.right a img{
     /* background-color: green; */
+
+}
+#wrapper  div.spotlight p{
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 10%;
+   
 
 }
 #edit-post-home {

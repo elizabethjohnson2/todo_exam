@@ -5,6 +5,7 @@
 
     <section id="wrapper">
         <h1>TODO TASK LIST</h1>
+        <p>Thinks to be done</p>
         <div class="content">
             {% for instance in instances %}
            <div class = "container">
@@ -31,6 +32,34 @@
               {% endfor %}
             
         </div>
+        <section class="spotlight">
+            <p>Completed Tasks<p>
+                <div class="content">
+                    {% for instance in instances %}
+                   <div class = "container">
+               
+                    <h1 class="left">
+                       
+                        <p>{{instance.title}}</p>
+                    </h1>
+                        <h2 class="right">
+                            
+                            <a href="">Finished Task</a>
+                            <a href="{% url 'posts:edit_task' id=instance.id  %}" class="edit_tasks" method="POST">
+                                <img src="{% static './images/pencil.svg' %}"/>
+                            </a>
+                            {% csrf_token %}
+                            <a href="{% url 'posts:delete_post' id=instance.id %}" 
+                            class="action-button reload"
+                            data-text="Are you sure want to remove this post."
+                            data-title="Confirm Delete!"
+                            title="Delete"><img src ="{% static './images/delete.svg' %}"/></a>
+                          
+                      </h2>
+                    </div>
+                      {% endfor %}
+        </section>
+            
        
     </section>
     {% endblock %}

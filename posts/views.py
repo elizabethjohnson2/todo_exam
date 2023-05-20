@@ -45,13 +45,24 @@ def edit_task(request,id):
             instance.save()
 
         
-        return redirect("posts:b create_post")
+        return redirect("posts:create_post")
     context = {
         "title":"Edit Task Page",
         'todo_text': instance
         
     }
     return render(request,"posts/edit_task.html", context=context)
+
+
+# @login_required(login_url="users/login/")
+# def create_post(request):
+#     instances = Completed.objects.filter(is_delete=False)
+#     context = {
+#         "title":"task page",
+#         "instances":instances
+
+#     }
+#     return render(request,"posts/create.html", context=context)
  
 # def edit_task(request, id):
 

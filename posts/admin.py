@@ -7,4 +7,9 @@ class TaskAdmin(admin.ModelAdmin):
 
 admin.site.register(Task,TaskAdmin)
 
+# class CompletedAdmin(admin.ModelAdmin):
+#     list_display = ["id", "title"]
+
+# admin.site.register(Completed,CompletedAdmin)
+
 
