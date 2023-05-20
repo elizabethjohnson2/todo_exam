@@ -184,7 +184,7 @@ text-align: left;
 
 }
 #wrapper  h1.left p{
-font-size: 20px;
+font-size: 23px;
 font-weight: 900;
 font-family:Gordita Bold ;
 }
@@ -227,10 +227,12 @@ margin-left: 40px;
     font-size: 35px;
     font-weight: 700;
     margin-left: 10%;
-   
+   background-image: url();
 
 }
-
+#wrapper .spotlight .container {
+    margin-bottom: 20px;
+}
 
 #wrapper div.spotlight div.container h2.right  a{
     padding: 29px 24px;

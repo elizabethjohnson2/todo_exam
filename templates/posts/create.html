@@ -7,7 +7,7 @@
         <h1>TODO TASK LIST</h1>
         <p>Thinks to be done</p>
         <div class="content">
-            {% for instance in instances %}
+            {% for instance in todo_list %}
            <div class = "container">
        
             <h1 class="left">
@@ -17,7 +17,7 @@
             </h1>
                 <h2 class="right">
                     
-                    <a href="">Finished Task</a>
+                    <a href="{% url 'posts:completed_task' id=instance.id  %}">Finished Task</a>
                     <a href="{% url 'posts:edit_task' id=instance.id  %}" class="edit_tasks" method="POST">
                         <img src="{{instance.edit_image.url}}"/>
                     </a>
@@ -36,7 +36,7 @@
         <section class="spotlight">
             <p>Completed Tasks<p>
                 <div class="content">
-                    {% for instance in instances %}
+                    {% for instance in completed_lists %}
                    <div class = "container">
                
                     <h1 class="left">
@@ -45,7 +45,7 @@
                     </h1>
                         <h2 class="right">
                             
-                            <a href="">Revised Task</a>
+                            <a href="{% url 'posts:revised_task' id=instance.id  %}">Revised Task</a>
                             <a href="{% url 'posts:edit_task' id=instance.id  %}" class="edit_tasks" method="POST">
                                 <img src="{{instance.edit_image.url}}"/>
                             </a>

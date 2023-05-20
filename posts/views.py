@@ -5,15 +5,17 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 
 
-from posts.models import Task,Completed
+from posts.models import Task
 
 
 @login_required(login_url="users/login/")
 def create_post(request):
-    instances = Task.objects.filter(is_delete=False)
+    todo_list = Task.objects.filter(is_delete=False, is_completed=False)
+    completed_list = Task.objects.filter(is_completed=True, is_delete=False)
     context = {
         "title":"task page",
-        "instances":instances
+        "todo_list":todo_list,
+        'completed_lists': completed_list
 
     }
     return render(request,"posts/create.html", context=context)
@@ -32,6 +34,7 @@ def delete_post(request,id):
     }
 
     return HttpResponse(json.dumps(response_data),content_type="application/json")
+
 
 
 @login_required(login_url="users/login/")
@@ -54,15 +57,26 @@ def edit_task(request,id):
     return render(request,"posts/edit_task.html", context=context)
 
 
-@login_required(login_url="users/login/")
-def complete_task(request):
-    instances = Completed.objects.filter(is_delete=False)
-    context = {
-        "title":"task page",
-        "instances":instances
 
-    }
-    return render(request,"posts/create.html", context=context)
+@login_required(login_url="users/login/")
+def completed_task(request,id):
+    instance = get_object_or_404(Task,id=id)
+    instance.is_completed = True
+
+    instance.save()
+
+    return redirect("posts:create_post")
+
+
+@login_required(login_url="users/login/")
+def revised_task(request,id):
+    instance = get_object_or_404(Task,id=id)
+    instance.is_completed = False
+
+    instance.save()
+
+    return redirect("posts:create_post")
+
  
 # def edit_task(request, id):
 
