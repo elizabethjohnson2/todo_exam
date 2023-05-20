@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: "ibm_plex_sans_thai_loopedRg";
     text-decoration: none;
-   
 }
 .wrapper {
     max-width: 1280px;
@@ -35,11 +34,9 @@ section.container {
     align-items: top;
     justify-content: center;
     padding-top: 80px;
-    
 }
 section.container section.form_container {
     width: 400px;
-   
 }
 
 section.container section.form_container div.top {

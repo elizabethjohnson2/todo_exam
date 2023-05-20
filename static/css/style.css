@@ -136,17 +136,15 @@ header .wrapper div.right a{
 }
 #wrapper  h1{
     text-align: center;
-    
     font-size: 30px;
     font-weight: 900;
 }
 #wrapper  p{
     font-size: 25px;
     font-weight: 700;
-    margin-left: 10%;
-    }
+    margin-left: 20%;
+}
 #wrapper div.content {
-
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
@@ -165,14 +163,6 @@ header .wrapper div.right a{
     font-weight: 900;
     font-family:Gordita Bold ;
 }
-#wrapper  h1.left  input {
-
-    width: 60%;
-    height: 40px;
-    border: 1px solid #949494;
-    border-radius: 6px;
-    margin-left: 10%;
-}
 #wrapper h2.right{
     display: flex;
     justify-content: space-between;
@@ -188,6 +178,7 @@ header .wrapper div.right a{
     margin-right: 20px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
     
 }
 #wrapper  h2.right a img{
