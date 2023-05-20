@@ -1,4 +1,3 @@
-# from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
 
 def generate_form_errors(form):
     message = ""
@@ -10,16 +9,5 @@ def generate_form_errors(form):
 
     return message
 
-# def paginate_instances(request,instances,per_page=6):
-#     instances = Paginator(instances, per_page)
-#     page = request.GET.get('page', 2)
 
-#     try:
-#         instances = instances.page(page)  
-#     except PageNotAnInteger:
-#         instances = instances.page(1)
-#     except EmptyPage:
-#         instances = instances.page(instances.num_pages)
-
-#     return instances
 

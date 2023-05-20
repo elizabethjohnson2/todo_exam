@@ -21,7 +21,7 @@
                                 {% csrf_token %}
                                 <a href="{% url 'posts:delete_post' id=instance.id %}" 
                                 class="action-button reload"
-                                data-text="Are you sure want to remove this post."
+                                data-text="Are you sure want to remove this task."
                                 data-title="Confirm Delete!"
                                 title="Delete"><img src ="{{instance.delete_image.url}}"/></a>
                             </h2>
